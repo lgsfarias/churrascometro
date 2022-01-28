@@ -1,0 +1,1 @@
+Esta aplicação tem como objetivo, dado o numero de convidados em um churrasco, informar a quantidade necessária de carne, frango, linguiça, acompanhamentos e bebidas.
