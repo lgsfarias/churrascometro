@@ -9,31 +9,104 @@
     <title>Churracômetro</title>
 </head>
 <body>
-    <div class="esmaecido">
+    <div class="wrapper esmaecido">
         <main>
             <h1>CHURRASCÔMETRO</h1>
             <div class="homem">
-                <label for="nome"><ion-icon name="man"></ion-icon></label>
-                <input type="number" name="homem" value="0" min="0">
+                <!-- <label for="nome"><ion-icon name="man"></ion-icon></label> -->
+                <p>Homens:</p>
+                <!-- <input type="number" name="homem" value="0" min="0"> -->
+                <div class="d-flex contador">
+                    <button class="big decrementar" onclick="decrementar(this);">
+                      -
+                    </button>
+                    <div class="big valor d-flex">0</div>
+                    <button class="big incrementar" onclick="incrementar(this);">
+                      +
+                    </button>
+                </div>
             </div>
             <div class="mulher">
-                <ion-icon name="woman"></ion-icon>
-                <input type="number" name="mulher" value="0" min="0">
+                <!-- <ion-icon name="woman"></ion-icon> -->
+                <p>Mulheres:</p>
+                <!-- <input type="number" name="mulher" value="0" min="0"> -->
+                <div class="d-flex contador">
+                    <button class="decrementar" onclick="decrementar(this);">
+                      -
+                    </button>
+                    <div class="valor d-flex">0</div>
+                    <button class="incrementar" onclick="incrementar(this);">
+                      +
+                    </button>
+                </div>
             </div>
             <div class="crianca">
-                <img src="./images/children-svgrepo-com.svg" alt="criança">
-                <input type="number" name="crianca" value="0" min="0">
+                <!-- <img src="./images/children-svgrepo-com.svg" alt="criança"> -->
+                <p>Crianças:</p>
+                <!-- <input type="number" name="crianca" value="0" min="0"> -->
+                <div class="d-flex contador">
+                    <button class="big decrementar" onclick="decrementar(this);">
+                      -
+                    </button>
+                    <div class="big valor d-flex">0</div>
+                    <button class="big incrementar" onclick="incrementar(this);">
+                      +
+                    </button>
+                </div>
             </div>
             <div class="acompanhamento">
                 <p>Possui acompanhamento?</p>
                 <input type="radio" id="sim" name="acompanhamento" value="sim" checked>
-                <label for="sexo-m">Sim</label>
+                <label for="sim">Sim</label>
                 <input type="radio" id="nao" name="acompanhamento" value="nao">
-                <label for="sexo-f">Não</label>
+                <label for="nao">Não</label>
             </div>
-            <button>Calcular</button>
+            <button onclick="calcular()" class="calcular">Calcular</button>
         </main>
     </div>
+    <div class="popup-wrapper wrapper escondido">
+        <div class="popup">
+            <h1>CHURRASCÔMETRO</h1>
+            <div class="carne justificado" >
+                <div class="descricao">Carne:</div>
+                <div class="quantidade">0</div>
+            </div>
+            <div class="frango justificado">
+                <div class="descricao">Frango:</div>
+                <div class="quantidade">0</div>
+            </div>
+            <div class="linguica justificado">
+                <div class="descricao">Linguiça:</div>
+                <div class="quantidade">0</div>
+            </div>
+            <div class="arroz justificado">
+                <div class="descricao">Arroz:</div>
+                <div class="quantidade">0</div>
+            </div>
+            <div class="farofa justificado">
+                <div class="descricao">Farofa:</div>
+                <div class="quantidade">0</div>
+            </div>
+            <div class="pao justificado">
+                <div class="descricao">Pão de alho:</div>
+                <div class="quantidade">0</div>
+            </div>
+            <div class="cerveja justificado">
+                <div class="descricao">Latas de cerveja:</div>
+                <div class="quantidade">0</div>
+            </div>
+            <div class="refrigerante justificado">
+                <div class="descricao">Refrigarante:</div>
+                <div class="quantidade">0</div>
+            </div>
+            <div class="suco justificado">
+                <div class="descricao">Suco:</div>
+                <div class="quantidade">0</div>
+            </div>
+            <button class ="fechar" onclick="fechar()">Fechar</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>    
 </body>
